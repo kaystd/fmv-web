@@ -1,0 +1,13 @@
+# WebStorm
+.idea
+
+# VsCode
+.vscode
+
+# Node modules
+node_modules
+
+# Production
+dist/
+
+

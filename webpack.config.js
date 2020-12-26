@@ -2,6 +2,18 @@ const path = require('path')
 
 module.exports = {
   entry: './src/index.js',
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node-modules/,
+        use: ['babel-loader'],
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -11,7 +23,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    open: 'google-chrome',
+    open: true,
     host: 'localhost',
     port: 3000,
     overlay: {

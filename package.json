@@ -1,7 +1,6 @@
-  
 {
-  "name": "FMV",
-  "version": "0.1.0",
+  "name": "fmv-web",
+  "version": "0.2.0",
   "description": "FastMarketView",
   "main": "src/index.js",
   "scripts": {
@@ -13,17 +12,24 @@
     "url": "https://github.com/kaystd/fmv-web.git"
   },
   "keywords": [],
-  "author": "RuRicK",
+  "authors": [
+    "RuRicK",
+    "Danil Kaist"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kaystd/fmv-web/issues"
   },
   "homepage": "https://github.com/kaystd/fmv-web#readme",
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
     "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1"
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {
-    "webpack-dev-server": "^3.3.1"
-  }
+  "dependencies": {}
 }

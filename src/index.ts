@@ -1,4 +1,4 @@
-const Component = () => {
+const Component = (): Element => {
   const element = document.createElement('div')
 
   element.innerHTML = 'Hello, World!'

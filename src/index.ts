@@ -1,3 +1,5 @@
+import './style.sass'
+
 const Component = (): Element => {
   const element = document.createElement('div')
 

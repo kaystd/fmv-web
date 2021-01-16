@@ -8,4 +8,12 @@ const Component = (): Element => {
   return element
 }
 
-document.body.appendChild(Component())
+let element = Component()
+
+document.body.appendChild(element)
+
+module.hot && module.hot.accept([], () => {
+  document.body.removeChild(element)
+  element = Component()
+  document.body.appendChild(element)
+})

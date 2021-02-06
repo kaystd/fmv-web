@@ -7,7 +7,9 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --config webpack.config.js",
     "lint": "eslint --ext .ts src",
-    "test": "jest --config jest.config.json"
+    "test": "jest --config jest.config.json",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,10 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
+    "@storybook/addon-actions": "^6.1.17",
+    "@storybook/addon-essentials": "^6.1.17",
+    "@storybook/addon-links": "^6.1.17",
+    "@storybook/react": "^6.1.17",
     "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.20",
     "@types/react": "^17.0.0",

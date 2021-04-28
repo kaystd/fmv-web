@@ -3,5 +3,6 @@
   "moduleFileExtensions": ["ts", "js", "jsx", "tsx", "json", "node"],
   "moduleNameMapper": {
     "^.+\\.(css|sass|scss)$": "babel-jest"
-  }
+  },
+  "modulePathIgnorePatterns": ["node_modules*"]
 }

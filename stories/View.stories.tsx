@@ -1,5 +1,5 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import React from 'react'
+import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { View } from '../src/components/View'
 import { ViewProps } from '../src/components/View/View.types'
@@ -15,11 +15,13 @@ export default {
 } as Meta
 
 const Template: Story<ViewProps> = props => (
-    <View {...props}>View</View>
+  <View {...props} />
 )
 
 export const Primary = Template.bind({})
 Primary.args = {
   color: 'blue',
-  backgroundColor: 'gray'
+  backgroundColor: 'gray',
+  width: '6rem',
+  height: '4rem',
 } as ViewProps

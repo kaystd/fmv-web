@@ -1,38 +1,39 @@
-import React from 'react';
-// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/react/types-6-0';
+import React from 'react'
+import { Story, Meta } from '@storybook/react/types-6-0'
 
-import { Button, ButtonProps } from './Button';
+import { Button, ButtonProps } from '../src/components/Button'
 
 export default {
   title: 'Example/Button',
   component: Button,
   argTypes: {
+    color: { control: 'color' },
     backgroundColor: { control: 'color' },
+    borderColor: { control: 'color' },
   },
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const DefaultTemplate: Story<ButtonProps> = props => (
+  <Button {...props}>Default</Button>
+);
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
+const CustomTemplate: Story<ButtonProps> = props => (
+  <Button {...props}>Custom</Button>
+);
+
+export const Default = DefaultTemplate.bind({});
+Default.args = {
+  children: 'Default',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+export const Custom = CustomTemplate.bind({});
+Custom.args = {
+  children: 'Custom',
+  color: 'blue',
+  backgroundColor: 'white',
+  borderColor: 'blue',
+  borderColorOnFocus: 'red',
+  ph: '3vw',
+  pv: '3vh',
+  ma: '2rem',
 };

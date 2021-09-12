@@ -6,11 +6,13 @@ type GridSizeUnits = BaseSizeUnits | 'fr'
 type BaseSize = `${number}${BaseSizeUnits}`
 type GridSize = `${number}${BaseSizeUnits}`
 
+type BorderStyle = 'none' | 'hidden' | 'dotted' | 'dashed' | 'solid' | 'double' | 'groove' | 'ridge' | 'inset' | 'outset'
+
 
 export interface BaseBorderProps {
   borderColor?: string
   borderRadius?: BaseSize
-  borderStyle?: string
+  borderStyle?: BorderStyle
   borderWidth?: BaseSize
 }
 
